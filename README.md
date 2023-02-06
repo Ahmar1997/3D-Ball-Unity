@@ -90,7 +90,7 @@ Now that we have trained out model we can test it out in the actual Unity enviro
 
 The model is in the form of an .onnx file. It is placed in the proper directory and the environment is tested out
 
-The below video shows the 3DBall environment tested out on out PPO trained model.
+The below video shows the 3DBall environment tested out on out PPO trained model and we can see that the cubes are able to balance the balls.
 
 https://user-images.githubusercontent.com/116836999/216885631-dfd1d65f-c7d6-4515-b6a6-c614e3ae7844.mp4
 
