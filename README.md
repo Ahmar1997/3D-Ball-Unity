@@ -75,3 +75,25 @@ A model was trained using proximal policy optimization with the following hyperp
         threaded:       False
         self_play:      None
         behavioral_cloning:     None
+        
+        
+        
+ # Results 
+ ![cumulative reward](https://user-images.githubusercontent.com/116836999/216882971-ab3da719-5b0c-41b2-8129-8737ea66987d.png)
+ ![episode length](https://user-images.githubusercontent.com/116836999/216882999-f5e373c5-88ab-4f40-8abf-b022757752f2.png)
+
+
+After about 250k steps the reward converges and reaches its maximum value of 100
+
+# Embedding model into Unity environment
+Now that we have trained out model we can test it out in the actual Unity environment<br>
+
+The model is in the form of an .onnx file. It is placed in the proper directory and the environment is tested out
+
+The below video shows the 3DBall environment tested out on out PPO trained model.
+
+https://user-images.githubusercontent.com/116836999/216885631-dfd1d65f-c7d6-4515-b6a6-c614e3ae7844.mp4
+
+
+
+
