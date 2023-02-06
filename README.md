@@ -20,3 +20,58 @@ The Behavior Parameters of the 3D Balance Ball example uses a Space Size of 8. T
 
 Behavior Parameters : Actions
 An Agent is given instructions in the form of actions. ML-Agents Toolkit classifies actions into two types: continuous and discrete. The 3D Balance Ball example is programmed to use continuous actions, which are a vector of floating-point numbers that can vary continuously. More specifically, it uses a Space Size of 2 to control the amount of x and z rotations to apply to itself to keep the ball balanced on its head.
+
+# Dependencies
+
+1. Unity Editor to visualize the environment
+2. Python 3.7.2 or higher
+3. com.unity.ml-agents Unity package
+4. com.unity.ml-agents.extensions Unity package
+5. mlagents Python package
+
+
+# Training a new model with Reinforcement Learning
+
+A model was trained using proximal policy optimization with the following hyperparameters
+
+
+ ## hyperparameters:
+          batch_size:   64 
+          buffer_size:  12000
+          learning_rate:        0.0003
+          epsilon:      0.2
+          lambd:        0.99
+          num_epoch:    3
+          shared_critic:        False
+          learning_rate_schedule:       linear
+          beta_schedule:        linear
+          epsilon_schedule:     linear
+### network_settings:
+          normalize:    True
+          hidden_units: 128
+          num_layers:   2
+          vis_encode_type:      simple
+          memory:       None
+          goal_conditioning_type:       hyper
+          deterministic:        False
+### reward_signals:
+          extrinsic:
+            gamma:      0.99
+            strength:   1.0
+            network_settings:
+              normalize:        False
+              hidden_units:     128
+              num_layers:       2
+              vis_encode_type:  simple
+              memory:   None
+              goal_conditioning_type:   hyper
+              deterministic:    False
+        init_path:      None
+        keep_checkpoints:       5
+        checkpoint_interval:    500000
+        max_steps:      500000
+        time_horizon:   1000
+        summary_freq:   12000
+        threaded:       False
+        self_play:      None
+        behavioral_cloning:     None
